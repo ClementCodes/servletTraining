@@ -7,7 +7,7 @@
 <body>
 
 
-
+<h1 > TOUT VA Béné</h1>
 <h1 > page index.jsp</h1>
 <h2 > En fait la page index.jsp est la page automatique du dossier   intitulé  : http://localhost:8080/project_servlet/ </h2>
 
