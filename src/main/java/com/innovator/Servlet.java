@@ -22,8 +22,6 @@ public class Servlet extends HttpServlet {
         // la servlette solicite les donnees quand je me connecte a la base aussi et
         // enfin la servlette route vers la page
 
-        request.setAttribute("user");
-
     }
 
     @Override

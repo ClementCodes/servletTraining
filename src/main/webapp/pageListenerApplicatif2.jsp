@@ -17,7 +17,23 @@ l'info est persistante tout au lon de la navigation et dde tout les utilisateurs
 
 <h4 >le synonyme de getApplicatio est servletContext </h4>
 <h4 >bug sur cette page je ne comprends pas pourquoi mais la je fatique </h4>
-<%= application.getAttribute("listePersonnes") %>
+
+
+<%
+
+ArrayList<Personne2> listep = (ArrayList<Personne2>) application.getAttribute("listeServiceApplication");
+
+ String str3="<ul>";
+ for(Personne2 e:listep){
+ 	str3+="<li>"+e.toString()+"</li>";
+ }
+ str3+="</ul>";
+
+ out.print(str3);
+
+
+
+%>
 
 
 </body>

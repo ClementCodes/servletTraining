@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <body>
@@ -21,9 +21,10 @@ ce la est du jstl avec le c:
 <br>
 Page 4 "c:Avec le for each different"
       <br>
-<%-- <c:forEach var="p" items="$(x)"> --%>
-<c:forEach var="p" items="${requestScope['x']}">
-$(p.nom)--$(p.prenom)--$(p.id)<br>
+<c:forEach var="p" items="$(x)">
+<%-- <c:forEach var="p" items="${requestScope['x']}"> --%>
+<c:forEach var="p" items="$(x)">
+$(p.nom)--$(p.prenom)--$(p.id)<br/>
 </c:forEach>
 
 

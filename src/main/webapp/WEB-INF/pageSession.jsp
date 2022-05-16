@@ -1,29 +1,29 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
-<!DOCTYPE html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
 <body>
-<h2 >Hello World!</h2>
-
-<h2 >page session  </h2> 
-<h3 >session.getAttribute("nom") </h3> 
+Page 2<br><hr>
 
 
-<%= session.getAttribute("nom")
+
+<h1>
+<% 
+ArrayList<String> x = (ArrayList<String>)session.getAttribute("listesessionvoiture");
+String txt = "Liste de voitures:<ol>";
+for(int i = 0 ; i < x.size() ; i++)
+	txt += "<li>" + x.get(i) + " ;</li>";
+txt += "</ol>";
+
+out.print(txt);
 %>
-<br>
-<h3 >session.getId()
+</h1>
 
-
-A chaque fois le get id change si on est sur autre page (page prive par exemple )
-
-
-c'est pour ca que l on se sert du get Attribute je pense pour se connecter et notamement pour le mot de passe  </h3> 
-
-<%= session.getId()
-%>
 
 </body>
 </html>

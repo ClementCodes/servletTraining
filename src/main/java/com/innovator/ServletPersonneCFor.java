@@ -2,15 +2,11 @@ package com.innovator;
 
 import java.io.IOException;
 
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.innovator.Dao.DaoPersonne;
 
 import com.innovator.model.Personne;
 
@@ -20,11 +16,12 @@ public class ServletPersonneCFor extends HttpServlet {
     public void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        DaoPersonne d = new DaoPersonne();
+        Personne p = new Personne(12, "clement", "dominique", 12);
 
         try {
-            ArrayList<Personne> lst = d.select();
-            request.setAttribute("x", lst);
+
+            request.setAttribute("x", p);
+            request.getRequestDispatcher("/WEB-INF/testForEach.jsp").forward(request, response);
 
         } catch (Exception e) {
 
@@ -37,7 +34,7 @@ public class ServletPersonneCFor extends HttpServlet {
         // fichier se trouve dans dans webinf ici via l url via le service
         // http://localhost:8080/project_servlet/api configure dans le fichier web.xml
         // grace au servlet mapping
-        request.getRequestDispatcher("/WEB-INF/testForEach.jsp").forward(request, response);
+
         // la servlette solicite les donnees quand je me connecte a la base aussi et
         // enfin la servlette route vers la page
 
