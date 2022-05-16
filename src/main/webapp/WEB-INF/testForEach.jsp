@@ -2,7 +2,7 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -13,7 +13,7 @@ Page 3 "c:forEach"
 ce la est du jstl avec le c:
       <br>
 <c:forEach var="p" items="$(x)">
-$(p.nom)--$(p.prenom)--$(p.id)  <br>
+$(p.nom)--$(p.prenom)--$(p.age)  <br>
 </c:forEach >
 
 

@@ -71,24 +71,17 @@ txt += "</ol>";
 </form>
 
 
-   <br>    <br>    <br>
-<form action="../project_servlet/servletapplicationcontext" method="post">
-     <label >Direction vers le listenerApplicatif </label>
-
-        <input type="submit" value="clickosse">
-</form>
-
 
 
    <br>    <br>    <br>
 <form action="../project_servlet/servletpersonnecfor" method="post">
-     <label >Direction vers le ltestPAGE 3 jsp cforeach </label>
+     <label >Direction vers le testForEachjsp cforeach </label>
 
         <input type="submit" value="clickosse">
 </form>
    <br>    <br>    <br>
 <form action="../project_servlet/servletpersonnecfor2" method="post">
-     <label >Direction vers le ltestPAGE 4 jsp cforeach </label>
+     <label >Direction vers le testForEachjsp jsp cforeach </label>
 
         <input type="submit" value="clickosse">
 </form>

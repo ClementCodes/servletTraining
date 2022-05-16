@@ -16,12 +16,11 @@ public class ServletPersonneCFor extends HttpServlet {
     public void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        Personne p = new Personne(12, "clement", "dominique", 12);
-
         try {
 
+            Personne p = new Personne(12, "clement", "dominique", 12);
             request.setAttribute("x", p);
-            request.getRequestDispatcher("/WEB-INF/testForEach.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/testForEach2.jsp").forward(request, response);
 
         } catch (Exception e) {
 
